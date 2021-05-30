@@ -1,21 +1,30 @@
-package sampe;
 
-abstract class shap{
-	abstract void draw();
+abstract class Bike{
+	abstract void bikebreak();
+	abstract void bikeStart();
 }
 
-class Rectangle extends shap{
+class function extends Bike{
+
 	@Override
-	void draw() {
-		// TODO Auto-generated method stub
-		System.out.println("Rectangle");
+	void bikebreak() {
+		System.out.println("Bike not movie");
+		
 	}
+
+	@Override
+	void bikeStart() {
+		System.out.println("Bike Ready to start");
+		
+	}
+	
 }
 
 public class AbstractDemo {
 	public static void main(String[] args) {
-		shap obj=new Rectangle();
-		obj.draw();
+		Bike b=new function();
+		b.bikeStart();
+		b.bikebreak();
 		
 	}
 
