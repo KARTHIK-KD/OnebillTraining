@@ -1,0 +1,30 @@
+
+
+/////////CHAR ONLY ACCEPT ALPHABETS///////////
+
+///////// VARCHAR ITS ACCEPT CHARACTER OR INTEGERS OR ANY SPECIAL CHARACTERS/////////////
+
+mysql> create table students_details(name char(10),roll varchar(20));
+Query OK, 0 rows affected (3.17 sec)
+
+mysql> insert into students_details values('karthik','1718L06');
+Query OK, 1 row affected (0.24 sec)
+
+mysql> insert into students_details values('priya','L10');
+Query OK, 1 row affected (0.17 sec)
+
+mysql> insert into students_details values('keerthivasan','1818NGK1');
+ERROR 1406 (22001): Data too long for column 'name' at row 1
+mysql> insert into students_details values('keerthi','1818NGK1');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from students_details;
++---------+----------+
+| name    | roll     |
++---------+----------+
+| karthik | 1718L06  |
+| priya   | L10      |
+| keerthi | 1818NGK1 |
++---------+----------+
+3 rows in set (0.00 sec)
+
